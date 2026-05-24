@@ -342,11 +342,6 @@ function drawUI(timeLeft) { // 这里添加了 timeLeft 参数
   let nextMilestone = milestones.find(m => ecoStats.totalKills < m) || "MAX";
   fill(100, 102, 105);
   text(nextMilestone === "MAX" ? "圆满" : "目标:" + nextMilestone, padR, 65);
-  // 在 drawUI 内部的末尾，加上这一行来显示倒计时
-  textAlign(RIGHT, TOP);
-  fill(60);
-  textSize(14);
-  text("剩余时间: " + timeLeft + "s", width - 20, 70);
 }
 function loadLocalEcoData() {
   let saved = localStorage.getItem('jelly_eco_player_data');
