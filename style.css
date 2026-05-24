@@ -1,0 +1,33 @@
+/* style.css */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* 防止移动端意外滚动 */
+  /* 关键：告诉浏览器不要处理触摸手势，全部留给 JS 处理 */
+  touch-action: none; 
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  /* 确保按钮在最上层 */
+  z-index: 1000 !important;
+  position: absolute !important;
+  
+  /* 确保按钮可以被点击 */
+  pointer-events: auto !important;
+  
+  /* 优化移动端点击体验 */
+  touch-action: manipulation !important;
+  -webkit-tap-highlight-color: transparent; /* 去除点击时的蓝色背景 */
+  
+  /* 防止 iOS 上的默认外观干扰 */
+  -webkit-appearance: none;
+  appearance: none;
+}
